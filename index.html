@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Luis Gauto | Finanzas gastronómicas</title>
+<meta name="description" content="Ordená los números de tu negocio gastronómico. Lista de espera del libro DE EMPATAR A GANAR, con libro de obsequio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: light;
+    --carbon: #1E1E1C;
+    --crema: #F4F1EA;
+    --brasa: #B5402A;
+    --piedra: #8C8A84;
+    --linea: #D9D5CB;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 16px; }
+  body {
+    margin: 0;
+    background: var(--crema);
+    color: var(--carbon);
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 20px; }
+  h1, h2, h3, .marca { font-family: "Manrope", system-ui, sans-serif; font-weight: 600; line-height: 1.2; margin: 0; }
+  p { margin: 0 0 16px; }
+  a { color: inherit; }
+
+  header { padding: 20px 0; border-bottom: 0.5px solid var(--linea); }
+  header .wrap { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .marca { font-size: 20px; }
+  .marca small { display: block; font-family: "Inter", sans-serif; font-weight: 400; font-size: 12px; letter-spacing: 1.2px; color: var(--piedra); text-transform: uppercase; }
+  nav a { font-size: 14px; color: var(--piedra); text-decoration: none; margin-left: 16px; }
+  nav a:hover { color: var(--carbon); }
+
+  .hero { padding: 56px 0 40px; }
+  .etiqueta { font-size: 13px; letter-spacing: 1.2px; text-transform: uppercase; color: var(--brasa); font-weight: 500; margin-bottom: 14px; }
+  h1 { font-size: clamp(30px, 6vw, 42px); margin-bottom: 20px; }
+  .lead { font-size: 19px; color: var(--carbon); margin-bottom: 28px; }
+  .btn {
+    display: inline-block;
+    background: var(--brasa);
+    color: var(--crema);
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  .btn:hover { opacity: 0.92; }
+  .btn-sec { background: transparent; color: var(--carbon); border: 1px solid var(--carbon); }
+  .nota { font-size: 14px; color: var(--piedra); margin-top: 14px; }
+
+  section { padding: 40px 0; border-top: 0.5px solid var(--linea); }
+  h2 { font-size: 26px; margin-bottom: 18px; }
+
+  .grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+  @media (min-width: 560px) { .grid { grid-template-columns: 1fr 1fr; } }
+  .card { background: #FFFFFF; border: 0.5px solid var(--linea); border-radius: 12px; padding: 22px; }
+  .card h3 { font-size: 18px; margin-bottom: 8px; }
+  .card p { font-size: 15px; color: var(--carbon); margin: 0; }
+  .num { font-family: "Manrope", sans-serif; font-weight: 600; color: var(--brasa); font-size: 14px; margin-bottom: 6px; display: block; }
+
+  .historia p { font-size: 17px; }
+  .firma { color: var(--piedra); font-size: 15px; margin-top: 8px; }
+
+  .precio { font-family: "Manrope", sans-serif; font-weight: 600; font-size: 34px; margin: 8px 0 4px; }
+  .precio small { font-family: "Inter", sans-serif; font-weight: 400; font-size: 15px; color: var(--piedra); }
+  .servicio ul { margin: 14px 0 22px; padding-left: 20px; font-size: 15px; }
+  .servicio li { margin-bottom: 6px; }
+  .servicio .btn { width: 100%; text-align: center; }
+
+  .cierre { text-align: center; padding: 48px 0; border-top: 0.5px solid var(--linea); }
+  .cierre h2 { margin-bottom: 12px; }
+  .cierre p { color: var(--carbon); }
+
+  footer { padding: 28px 0 40px; border-top: 0.5px solid var(--linea); font-size: 14px; color: var(--piedra); }
+  footer a { color: var(--carbon); }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="marca">Luis Gauto<small>Finanzas gastronómicas</small></div>
+    <nav>
+      <a href="#libro">El libro</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#lista">Lista de espera</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero wrap">
+    <p class="etiqueta">Para dueños de negocios gastronómicos</p>
+    <h1>Ordená los números de tu negocio sin depender de tu memoria.</h1>
+    <p class="lead">Escribí DE EMPATAR A GANAR desde mi propio negocio gastronómico. Casi me rendí varias veces, seguí adelante, y ahora quiero acompañarte a vos en ese mismo camino.</p>
+    <a class="btn" href="https://forms.gle/BYqetQEZRGswpYAw8">Quiero sumarme a la lista de espera</a>
+    <p class="nota">Libro de obsequio para quienes se suman. Lanzamiento: 28 de diciembre de 2026.</p>
+  </div>
+
+  <section id="libro">
+    <div class="wrap">
+      <h2>Qué vas a encontrar en el libro</h2>
+      <div class="grid">
+        <div class="card">
+          <span class="num">01</span>
+          <h3>Números que cuentan</h3>
+          <p>Cómo leer ingresos, compras, gastos y márgenes para decidir con datos.</p>
+        </div>
+        <div class="card">
+          <span class="num">02</span>
+          <h3>Procesos que liberan al dueño</h3>
+          <p>Cómo documentar recetas, compras y rutinas para poder delegar.</p>
+        </div>
+        <div class="card">
+          <span class="num">03</span>
+          <h3>Historias reales</h3>
+          <p>Los aciertos y los errores de la transición de un negocio improvisado a uno ordenado.</p>
+        </div>
+        <div class="card">
+          <span class="num">04</span>
+          <h3>Herramientas prácticas</h3>
+          <p>Planillas y pasos concretos que podés aplicar el mismo día.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="historia">
+    <div class="wrap">
+      <h2>Por qué lo escribo</h2>
+      <p>Tengo un negocio gastronómico en Clorinda, y durante mucho tiempo lo manejé de memoria y a los apurones. Hubo meses en los que no sabía si estaba ganando o perdiendo, y días en los que tuve ganas de cerrar todo.</p>
+      <p>Lo que me sacó de ahí fue ordenar los números, documentar lo que hacía y aprender a decidir con datos. Por ejemplo, al hacer las cuentas descubrí que abrir los lunes me generaba pérdida, no ganancia.</p>
+      <p>No quiero que tu negocio pase por lo mismo a ciegas. Y en cada frustración y en cada logro, no vas a estar solo.</p>
+      <p class="firma">Luis Gauto</p>
+    </div>
+  </section>
+
+  <section id="servicios">
+    <div class="wrap">
+      <h2>Formas de trabajar juntos</h2>
+      <div class="grid">
+        <div class="card servicio">
+          <h3>Asesoría grupal</h3>
+          <div class="precio">USD 500 <small>por negocio</small></div>
+          <ul>
+            <li>Libro, planillas y estandarización de procesos</li>
+            <li>Cálculo de costos y fórmula de sobres</li>
+            <li>Llamada explicativa sobre cómo aplicar la fórmula</li>
+            <li>Grupo de WhatsApp y consultas dentro del grupo</li>
+            <li>Para el dueño y hasta una o dos personas</li>
+          </ul>
+          <a class="btn btn-sec" href="https://forms.gle/BYqetQEZRGswpYAw8">Quiero esta opción</a>
+        </div>
+        <div class="card servicio">
+          <h3>Asesoría 1 a 1</h3>
+          <div class="precio">USD 1.000 <small>un mes</small></div>
+          <ul>
+            <li>Todo lo de la asesoría grupal</li>
+            <li>Llamadas de seguimiento una o dos veces por semana para revisar números</li>
+            <li>Grupo de WhatsApp y consultas</li>
+            <li>Respuestas casi las 24 horas, los 7 días de la semana</li>
+          </ul>
+          <a class="btn" href="https://forms.gle/BYqetQEZRGswpYAw8">Quiero esta opción</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cierre" id="lista">
+    <div class="wrap">
+      <h2>Sumate a la lista de espera</h2>
+      <p>Anotate y recibí el libro de obsequio, con el método para ordenar ingresos, compras, gastos y recetas.</p>
+      <p><a class="btn" href="https://forms.gle/BYqetQEZRGswpYAw8">Quiero sumarme</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Luis Gauto | Finanzas gastronómicas</span>
+    <span>
+      <a href="https://www.instagram.com/luisgauto.finanzas">Instagram</a> ·
+      <a href="https://www.tiktok.com/@luisgauto.finanzas">TikTok</a>
+    </span>
+  </div>
+</footer>
+
+</body>
+</html>
